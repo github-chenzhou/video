@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="yes" name="apple-touch-fullscreen" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta name="description" content="陈舟 chenzhou zhou 视频 创意视频">
+  <meta content="telephone=no,email=no" name="format-detection" />
+  <title>创意视频</title>
+
+<style>
+* { boz-sizing: border-box; font-family: Avenir, sans-serif; }
+body { margin: 0; } 
+figure#desk { 
+  transform: rotateX(60deg);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#6c6769 0%, #0a0a0a 100%); 
+  background-size: cover;
+  transition: 1.2s 2s;
+  perspective: 1500px;
+}
+figure#desk a  {
+  position: absolute;
+  top: 80px;
+  border: 20px solid #ffe;
+  box-shadow: 0px 0px 6px 6px rgba(0,0,0,0.3);
+  width: 75%;
+  font-size: 0;
+  background: #000;
+}
+figure#desk a video { width: 100%; font-size: 0; transition: .6s; }
+figure a#estee  {
+  transform: translateX(55%) rotateZ(60deg);
+  transition: 2s;
+}
+figure:hover a#estee { transform: translateX(5%) rotateZ(700deg); 
+}
+figure a#indre { 
+  top: 250px;
+  transform: translateX(40%) rotateZ(48deg);
+  transition: 2s .4s; 
+}
+figure#desk:hover a#indre { 
+  transform: translateX(8%) rotateZ(360deg);
+}
+figure#desk:hover {
+  transform: rotateX(10deg); 
+}
+figure#desk a:hover video { opacity: 0.5; }
+figure#desk a:before {
+  content: "play";
+  font-size: 30px;
+  position: absolute;
+  top: 45%; left: 45%;
+  color: #fff;
+  opacity: 0;
+  transition: .3s;
+}
+figure#desk a:hover:before { opacity: 1; }
+figure#desk a.playing:hover:before {
+  content: none; 
+  opacity: 0; 
+}
+figure#desk a.playing video { opacity: 1; }
+</style>
+
+    <script src="js/prefixfree.min.js"></script>
+
+</head>
+
+<body>
+
+<figure id="desk">
+<a href="#" id="estee"> 
+<video poster="http://demosthenes.info/assets/images/estee.jpg">
+	<source src="http://demosthenes.info/assets/videos/estee.mp4" type="video/mpeg">
+	<source src="http://demosthenes.info/assets/videos/estee.webm" type="video/webm">
+</video>
+</a>
+
+<a href="#" id="indre"> 
+<video poster="http://demosthenes.info/assets/images/indre.jpg">
+	<source src="http://demosthenes.info/assets/videos/indre.mp4" type="video/mpeg">
+	<source src="http://demosthenes.info/assets/videos/indre.webm" type="video/webm">
+</video>
+</a>
+</figure>
+
+  <script src='js/jquery.js'></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
